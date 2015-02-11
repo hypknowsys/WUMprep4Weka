@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jardesc>
+<jar path="C:/Dokumente und Einstellungen/cpohle.HOLSTEIN/Eigene Dateien/development/workspace/WUMprep4Weka/bin/WUMprepConfigEditor.jar"/>
+<options buildIfNeeded="true" compress="true" descriptionLocation="/WUMprep4Weka/WUMprepConfigEditor.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" useSourceFolders="false"/>
+<manifest generateManifest="false" mainClassHandleIdentifier="=WUMprep4Weka/src&lt;org.hypknowsys.wumprep.configeditor{WUMprepConfigEditor.java[WUMprepConfigEditor" manifestLocation="/WUMprep4Weka/WUMprepConfigEditor.manifest" manifestVersion="1.0" reuseManifest="true" saveManifest="true" usesManifest="true">
+<sealing sealJar="false">
+<packagesToSeal/>
+<packagesToUnSeal/>
+</sealing>
+</manifest>
+<selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+<file path="/WUMprep4Weka/.project"/>
+<file path="/WUMprep4Weka/.cvsignore"/>
+<file path="/WUMprep4Weka/build-user.xml"/>
+<javaElement handleIdentifier="=WUMprep4Weka/src"/>
+<file path="/WUMprep4Weka/README"/>
+<file path="/WUMprep4Weka/javadoc.xml"/>
+<file path="/WUMprep4Weka/build.xml"/>
+<file path="/WUMprep4Weka/COPYING"/>
+<file path="/WUMprep4Weka/TODO.txt"/>
+<file path="/WUMprep4Weka/CHANGELOG"/>
+<file path="/WUMprep4Weka/.classpath"/>
+</selectedElements>
+</jardesc>

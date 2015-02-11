@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jardesc>
+<jar path="C:/Dokumente und Einstellungen/cpohle.HOLSTEIN/Eigene Dateien/development/workspace/WUMprep4Weka/dist/WUMprep4Weka-0.9-alpha3-src.jar"/>
+<options buildIfNeeded="true" compress="true" descriptionLocation="/WUMprep4Weka/build/Weka-WUMprep4Weka-src.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="true" overwrite="true" saveDescription="true" useSourceFolders="true"/>
+<selectedElements exportClassFiles="false" exportJavaFiles="true" exportOutputFolder="false">
+<folder path="/WUMprep4Weka/misc"/>
+<folder path="/WUMprep4Weka/lib"/>
+<javaElement handleIdentifier="=WUMprep4Weka/src"/>
+<file path="/WUMprep4Weka/README"/>
+<file path="/WUMprep4Weka/COPYING"/>
+<file path="/WUMprep4Weka/CHANGELOG"/>
+<file path="/WUMprep4Weka/INSTALL"/>
+</selectedElements>
+</jardesc>

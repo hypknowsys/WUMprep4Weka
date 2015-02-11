@@ -1,0 +1,114 @@
+================================================================================
+                                   README
+          WUMprep4Weka - WUMprep for the Weka data mining environment
+                             Release 0.9-alpha3
+                                 2005-10-30
+================================================================================
+Copyright (C) 2000-2005  Carsten Pohle (cp AT cpohle de)
+
+
+1. About
+=========
+
+WUMprep4Weka is a project aiming at the smooth integration of WUMprep, a 
+powerful tool suite for Web log file processing and analysis, with Weka, a 
+collection of machine learning algorithms for data mining tasks 
+(see http://www.cs.waikato.ac.nz/~ml/weka/).
+
+WUMprep4Weka is available both as a standalone plugin for Weka that requires
+manual installation of Weka and WUMprep, and as a pre-packaged release of Weka 
+(called "Weka-WP4W") that contains everything you need for using WUMprep4Weka
+but the Perl and Java runtime environments.
+
+
+2. Installation
+================
+
+Please follow the instructions given in the INSTALL file.
+
+
+3. Usage
+=========
+
+There is no user documentation yet - sorry!
+
+However, this is how to start: 
+
+ * Install WUMprep4Weka (see before).
+ 
+ * In the Weka GUI Chooser, click on "KnowledgeFlow".
+ 
+ * Select the "Data Sources" tab, select "WeblogLoader" from the 
+   "org.hypknowsys" group of nodes and drop it on the KnowledgeFlow workspace.
+   
+ * Right-click the WeblogLoader node and select "Configure".
+ 
+ * At the bottom of the configuration dialog, specify where you have installed
+   WUMprep (if you are using Weka-WP4W, this should correct path should be
+   initialized automatically). You'll have to set this only once as long as you
+   don't want to switch between differnt versions of WUMprep.
+   
+ * Use the configuration dialog for setting the log file template and the log
+   file to import.
+   
+ * Close the configuration dialog.
+ 
+ * Switch to the "Filter" tab and select one of the WUMprep4Weka filters in the 
+   "org.hypknowsys" group. Drop this filter on the KnowledgeFlow workspace.
+   
+ * Right-click the WeblogLoader node, select "data set", and the click the 
+   filter creating the data flow from the loader to the filter.
+   
+ * You can add further (WUMprep4Weka) filters as you need.
+ 
+ * In order to view the results of a WUMprep filter, add a TextView viewer from 
+   the "Visualize" tab and connect the filter's data stream to it.
+   
+ * In order to export the results of your WUMprep stream back to a log file,
+   use the WeblogSaver node from the "Data Sinks" tab.
+   
+   
+4. Diagnosing Errors
+=====================
+   
+The WUMprep scripts write diagnostical messages to the error output, which is 
+displayed in the KnowledgeFlow log (which you can open via the "Log" button at 
+the lower right corner of the KnowledgeFlow window).
+   
+  ALLWAYS FIRST CHECK THE LOG IF SOMETHING DOES NOT RUN AS EXPECTED!
+
+Also check the console output of Weka. It might provide useful hints about what 
+caused the error.
+
+When asking the hypKNOWsys team for support, please be prepared to be asked for 
+each of the above logs plus the input files you're trying to process (both the 
+log and the logfileTemplate).
+
+Another helpful tool might be the TextViewer node. Just connect it to the 
+suspicious WUMprep4Weka node's data output and see what arrives when running
+the KnowledgeFlow.
+
+
+6. Credits
+===========
+
+The hypKNOWsys team would like to thank Mark Hall for including the changes 
+necessary to make WUMprep4Weka run into the official Weka distribution.
+
+
+5. Copyright
+=============
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA

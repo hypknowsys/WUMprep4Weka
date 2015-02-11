@@ -1,0 +1,29 @@
+WUMprep4Weka.wumprepConfSettings=\
+ anonymizerSettings:anonKeyFile,\
+ filterSettings:filterDuplicateTimeout,\
+ filterSettings:filterPath,\
+ filterSettings:filterHosts,\
+ filterSettings:filterStatusCodes,\
+ filterSettings:filterDuplicatesExtensions,\
+ global:domain,\
+ global:inputLogTemplate,\
+ global:outputDirectory,\
+ global:serverFamiliy,\
+ global:inputLogs,\
+ mapTaxonomiesSettings:taxonoMapLog,\
+ mapTaxonomiesSettings:taxonomyDefs,\
+ reverseLookupSettings:rLookupCacheFile,\
+ rmRobotsSettings:rmRobotsDB,\
+ rmRobotsSettings:rmRobotsMaxViewTime,\
+ sessionFilterSettings:sessionFilterRepeatedRequests,\
+ sessionFilterSettings:sessionFilterHostIp,\
+ sessionFilterSettings:sessionFilterHostName,\
+ sessionFilterSettings:sessionFilterPath,\
+ sessionizeSettings:sessionizeMaxPageViewTime,\
+ sessionizeSettings:sessionizeSeparator,\
+ sessionizeSettings:sessionizeIdCookie,\
+ sessionizeSettings:sessionizeInsertReferrerHits,\
+ sessionizeSettings:sessionizeQueryReferrerName,\
+ sessionizeSettings:sessionizeForeignReferrerStartsSession
+ 
+ 

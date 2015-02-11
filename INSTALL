@@ -1,0 +1,200 @@
+================================================================================
+                                    INSTALL
+           WUMprep4Weka - WUMprep for the Weka data mining environment
+                               Release 0.9-alpha3
+                                   2005-10-30
+================================================================================
+Copyright (C) 2000-2005  Carsten Pohle (cp AT cpohle de)
+
+
+0. Preliminary Remark
+======================
+
+This documentation is not yet thoroughly tested and may change before the next
+official release. If you run into any problems or detect some mistake, please
+check first the online documentation on http://www.hypknowsys.org for updates
+and corrections!
+
+
+1. Prerequisites
+=================
+
+1.1. Perl
+----------
+
+You need a Perl interpreter for running the WUMprep scripts. WUMprep has been
+developed in a Perl 5.8.x environment. Most Linux distributions install this by
+default, please check your distribution's documentation if necessary.
+
+If you plan to use WUMprep and/or WUMprep4Weka on Windows, you probably have to
+get and install Perl on your own. Please refer to http://www.perl.org for links
+to Perl environments for both Windows and Linux/Unix and for detailed
+installation documentation.
+
+
+1.2. Perl Modules Required by WUMprep
+--------------------------------------
+
+Independent of the WUMprep4Weka release you whish to install, there is a number
+of Perl modules that are required by the WUMprep Perl scripts and that you must
+install before using WUMprep4Weka.
+
+For instructions on installing Perl modules, please refer to any of the
+following HOWTOs:
+
+ * http://perl.about.com/od/perlmodule1/l/aa030500a.htm
+ * http://search.cpan.org/dist/perl/pod/perlmodinstall.pod
+ 
+If you are using ActivePerl on Windows, you might use PPM for installing 
+missing modules (note that the URL line below is wrapped):
+
+ * http://aspn.activestate.com/ASPN/Perl/Products/ActivePerl-5.6/faq/
+   ActivePerl-faq2.html
+
+The following modules used by WUMprep are part of the standard Perl 5.8.x
+environment:
+
+ * File::Copy
+ * FindBin
+ * POSIX
+ * Socket
+
+In addition, WUMprep requires the following modules that are not part of a
+default Perl installation:
+
+ * Date::Format
+ * HTML::Template
+ * HTTP::Date
+ * URI::Escape
+ 
+WUMprep4Weka must be able to find the Perl executable ("perl" on Linux, 
+"perl.exe" on windows). For this, it searches the directories given in the 
+PATH environment variable. Please make sure that Perl can be found this way.
+
+
+1.3 Java
+---------
+
+While Weka runs on a Java 1.4 or later, WUMprep4Weka requires Java 1.5
+(alternatively called "J2SE 1.5.0") or later.
+
+WUMprep4Weka WONT RUN ON JAVA VERSIONS BEFORE 1.5!
+
+If you don't already have the appropriate Java runtime environment installed 
+(or the corresponding JDK, respectively), you can get it together with 
+installation instructions for your platform from http://java.sun.com.
+
+
+1.4 Weka
+---------
+
+WUMprep4Weka is a plugin for the Weka data mining environment, as it can be
+downloaded from http://www.cs.waikato.ac.nz/~ml/weka/.
+
+WUMprep4Weka HAS BEEN DEVELOPED AND TESTED FOR WEKA RELEASE 3.5.1! This was the 
+development release at the time of this writing. Furthermore, WUMprep4Weka
+requires a handful of minor modifications to official Weka releases <= 3.5.1. 
+Thus, if you want to use the WUMprep4Weka plugin together with a separate 
+version <= 3.5.1 of Weka, you have to get the Weka sources, apply the patches 
+that come with WUMprep4Weka (see the directory misc/modifiedWekaFiles of the 
+source distribution), and build Weka on your own!!! As long as you are not a 
+Java developer, this is not trivial - better opt for the second alternative 
+described below.
+
+The easiest way to get WUMprep4Weka is to download the special "Weka-WP4W" 
+release, which brings you the right Weka version with WUMprep and WUMprep4Weka 
+already included. You can get it from http://www.hypknowsys.org.
+
+
+2. Installation
+================
+
+WUMprep4Weka is available in two "flavors": As a plugin for an existing Weka
+installation (the do-it-yourself way), and as part of a special Weka
+distribution (the convenient way). In the following, we describe how to install
+both of these variants.
+
+For the moment, we strongly recommend to use the Weka-WP4W distribution!!!
+
+
+2.1. WUMprep4Weka Plugin Installation
+--------------------------------------
+
+ATTENTION: WUMprep4Weka requires a few patches applied to the official Weka
+           sources <= version 3.5.1. If you have no idea what this means and 
+           how to compile the patched Weka on your own, please proceed to 2.2. 
+           and use the pre-packaged WUMprep4Weka release instead!
+
+Follow these steps to install WUMprep4Weka as a plugin for your existing Weka 
+installation (see the "Requirements" section for the required Weka version):
+
+ 0. Check whether your computer fits the requirements explained above.
+ 
+ 0.a. Get the Weka sources >= 3.5.1
+ 
+ 1. Download and install the latest WUMprep release (>= 0.11.0) from 
+ 	http://www.hypknowsys.org.
+ 	
+ 2. Download the latest WUMprep4Weka release from http://www.hypknowsys.org. 
+ 	The plugin comes as an archive that extracts into a subdirectory named 
+ 	"WUMprep4Weka-[version]".
+ 
+ 2.a. In the misc/patch directory of the WUMprep4Weka distribution, you'll find
+ 	the file(s) containing the patches to the official Weka sources in
+ 	"unified diff" format. You should know how to apply them. If not, please
+ 	use the Weka-WP4W distribution.
+ 
+ 3. Weka (version >= 3.4) uses a file called "GenericPropertiesCreator.props" 
+ 	for defining which algorithms and filters to load. You must edit this file 
+ 	in order to make the WUMprep4Weka plugin available in Weka:
+    
+    * To "weka.filters.Filter", add "org.hypknowsys.wumprep4weka.filters"
+    
+    * To "weka.core.converters.Loader", add 
+      "org.hypknowsys.wumprep4weka.core.converters"
+      
+    * To "weka.core.converters.Saver", add
+      "org.hypknowsys.wumprep4weka.core.converters"
+      
+	The default GenericPropertiesCreator.props file is located in the weka/gui/ 
+	directory of the Weka source distribution. According to Weka's 
+	documentation, you should place your modified copy of this file in your 
+	home directory. However, this does not seem to work reliably. Please refer 
+	to the Weka documentation for more information about installing plugins via 
+	the GenericPropertiesCreator.props file.
+ 
+ 4. When running Weka, add wumprep4weka.jar to the Java classpath. If you start 
+ 	Weka the usual way via the GUI chooser, start it with the following command 
+ 	line:
+    
+     java -classpath [path-to-wumprep4weka.jar]:$CLASSPATH -jar weka.jar
+     
+    Please refer to the Weka documentation for more information about starting 
+    Weka.
+
+ 5. Proceed as described under "Usage" in the README file.
+ 
+
+2.2. Weka-WP4W Installation
+----------------------------
+
+This describes how to install and run the "Weka-WP4W" ("Weka-WUMprep4Weka")
+distribution of Weka, which already includes both the WUMprep4Weka plugin and 
+the appropriate version of the WUMprep scripts.
+
+ 0. Check whether your computer fits the requirements explained above.
+ 
+ 1. Download the latest Weka-WP4W release from http://www.hypknowsys.org (you'll
+  	find it via the WUMprep4Weka pages).
+  	
+ 2. Install Weka-WP4W by extracting the archive into a directory of your choice.
+ 
+ 3. MAKE SURE THAT PERL IS ON YOUR "PATH"!
+ 
+ 4. Run Weka-WP4W by issuing
+ 
+ 	  java -jar weka-wp4w-[releaseNo].jar
+ 	  
+ 5. Proceed as described under "Usage" in the README file.
+
+

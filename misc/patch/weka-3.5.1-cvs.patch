@@ -1,0 +1,652 @@
+Index: version.txt
+===================================================================
+RCS file: /usr/local/global-cvs/ml_cvs/weka/core/version.txt,v
+retrieving revision 1.1
+diff -u -r1.1 version.txt
+--- version.txt	30 Jun 2005 05:42:27 -0000	1.1
++++ version.txt	18 Oct 2005 12:59:13 -0000
+@@ -1 +1 @@
+-3.4.3
++3.5.1
+\ No newline at end of file
+Index: GUIChooser.java
+===================================================================
+RCS file: /usr/local/global-cvs/ml_cvs/weka/gui/GUIChooser.java,v
+retrieving revision 1.24
+diff -u -r1.24 GUIChooser.java
+--- GUIChooser.java	29 Jul 2005 01:33:36 -0000	1.24
++++ GUIChooser.java	18 Oct 2005 12:59:20 -0000
+@@ -134,12 +134,19 @@
+     this.getContentPane().add(wekaPan, BorderLayout.CENTER);
+     
+     JPanel titlePan = new JPanel();
+-    titlePan.setLayout(new GridLayout(8,1));
++    titlePan.setLayout(new GridLayout(11,1));
+     titlePan.setBorder(BorderFactory.createEmptyBorder(10, 5, 10, 5));
+     titlePan.add(new JLabel("Waikato Environment for",
+                             SwingConstants.CENTER));
+     titlePan.add(new JLabel("Knowledge Analysis",
+                             SwingConstants.CENTER));
++
++    titlePan.add(new JLabel(""));
++    titlePan.add(new JLabel("WUMprep4Weka Release",
++        SwingConstants.CENTER));
++    titlePan.add(new JLabel("See http://www.hypknowsys.org",
++        SwingConstants.CENTER));
++
+     titlePan.add(new JLabel(""));
+     titlePan.add(new JLabel("Version " + Version.VERSION,
+                             SwingConstants.CENTER));
+Index: GenericPropertiesCreator.props
+===================================================================
+RCS file: /usr/local/global-cvs/ml_cvs/weka/gui/GenericPropertiesCreator.props,v
+retrieving revision 1.5
+diff -u -r1.5 GenericPropertiesCreator.props
+--- GenericPropertiesCreator.props	28 Sep 2005 03:18:15 -0000	1.5
++++ GenericPropertiesCreator.props	18 Oct 2005 12:59:21 -0000
+@@ -1,96 +1,99 @@
+-# Customises the list of options given by the GenericObjectEditor
+-# for various superclasses.
+-
+-# Lists the ResultProducers-Packages I want to choose from
+-weka.experiment.ResultProducer=\
+-  weka.experiment
+-
+-# Lists the ResultListeners-Packages I want to choose from
+-weka.experiment.ResultListener=\
+-  weka.experiment
+-
+-# Lists the SplitEvaluators-Packages I want to choose from
+-weka.experiment.SplitEvaluator=\
+-  weka.experiment
+-
+-# Lists the Classifiers-Packages I want to choose from
+-weka.classifiers.Classifier=\
+- weka.classifiers.bayes,\
+- weka.classifiers.functions,\
+- weka.classifiers.lazy,\
+- weka.classifiers.meta,\
+- weka.classifiers.meta.nestedDichotomies,\
+- weka.classifiers.misc,\
+- weka.classifiers.trees,\
+- weka.classifiers.rules
+-
+-# Lists the Filters-Packages I want to choose from
+-weka.filters.Filter= \
+- weka.filters.supervised.attribute, \
+- weka.filters.supervised.instance, \
+- weka.filters.unsupervised.attribute, \
+- weka.filters.unsupervised.instance
+-
+-# Lists the UnsupervisedFilters-Packages I want to choose from
+-weka.filters.UnsupervisedFilter = \
+- weka.filters.unsupervised.attribute, \
+- weka.filters.unsupervised.instance
+-
+-# Lists the Attribute Selection Evaluators-Packages I want to choose from
+-weka.attributeSelection.ASEvaluation = \
+- weka.attributeSelection
+-
+-# Lists the Attribute Selection Search methods-Packages I want to choose from
+-weka.attributeSelection.ASSearch = \
+- weka.attributeSelection
+-
+-# Lists the Associators-Packages I want to choose from
+-weka.associations.Associator=\
+- weka.associations
+-
+-
+-# Lists the Clusterers-Packages I want to choose from
+-weka.clusterers.Clusterer=\
+- weka.clusterers
+-
+-# Lists the DensityBasedClusterers I want to choose from
+-weka.clusterers.DensityBasedClusterer=\
+- weka.clusterers
+-
+-# Lists the Loaders-Packages I want to choose from
+-weka.core.converters.Loader=\
+- weka.core.converters
+-
+-# Lists the Savers-Packages I want to choose from
+-weka.core.converters.Saver=\
+- weka.core.converters
+-
+-# Lists the search algorithms for nearest neighbour search
+-weka.core.NearestNeighbourSearch =\
+- weka.core
+-
+-# Lists the distance functions for use nearest neighbour search
+-weka.core.DistanceFunction =\
+- weka.core 
+-
+-# Lists the Search algorithm for Bayes net structure learning-Packages I want to choose from
+-weka.classifiers.bayes.net.search.SearchAlgorithm=\
+- weka.classifiers.bayes.net.search.local, \
+- weka.classifiers.bayes.net.search.ci, \
+- weka.classifiers.bayes.net.search.global, \
+- weka.classifiers.bayes.net.search.fixed
+-
+-weka.classifiers.bayes.net.estimate.BayesNetEstimator =\
+- weka.classifiers.bayes.net.estimate
+-
+-# Lists the DataGenerator Algorithms-Packages
+-weka.datagenerators.DataGenerator=\
+- weka.datagenerators.classifiers.classification,\
+- weka.datagenerators.classifiers.regression,\
+- weka.datagenerators.clusterers
+-
+-# Lists the packages where to find ClusterDefinition
+-weka.datagenerators.ClusterDefinition=\
+- weka.datagenerators,\
+- weka.datagenerators.clusterers
+-
++# Customises the list of options given by the GenericObjectEditor
++# for various superclasses.
++
++# Lists the ResultProducers-Packages I want to choose from
++weka.experiment.ResultProducer=\
++  weka.experiment
++
++# Lists the ResultListeners-Packages I want to choose from
++weka.experiment.ResultListener=\
++  weka.experiment
++
++# Lists the SplitEvaluators-Packages I want to choose from
++weka.experiment.SplitEvaluator=\
++  weka.experiment
++
++# Lists the Classifiers-Packages I want to choose from
++weka.classifiers.Classifier=\
++ weka.classifiers.bayes,\
++ weka.classifiers.functions,\
++ weka.classifiers.lazy,\
++ weka.classifiers.meta,\
++ weka.classifiers.meta.nestedDichotomies,\
++ weka.classifiers.misc,\
++ weka.classifiers.trees,\
++ weka.classifiers.rules
++
++# Lists the Filters-Packages I want to choose from
++weka.filters.Filter= \
++ weka.filters.supervised.attribute, \
++ weka.filters.supervised.instance, \
++ weka.filters.unsupervised.attribute, \
++ weka.filters.unsupervised.instance, \
++ org.hypknowsys.wumprep4weka.filters
++
++# Lists the UnsupervisedFilters-Packages I want to choose from
++weka.filters.UnsupervisedFilter = \
++ weka.filters.unsupervised.attribute, \
++ weka.filters.unsupervised.instance
++
++# Lists the Attribute Selection Evaluators-Packages I want to choose from
++weka.attributeSelection.ASEvaluation = \
++ weka.attributeSelection
++
++# Lists the Attribute Selection Search methods-Packages I want to choose from
++weka.attributeSelection.ASSearch = \
++ weka.attributeSelection
++
++# Lists the Associators-Packages I want to choose from
++weka.associations.Associator=\
++ weka.associations
++
++
++# Lists the Clusterers-Packages I want to choose from
++weka.clusterers.Clusterer=\
++ weka.clusterers
++
++# Lists the DensityBasedClusterers I want to choose from
++weka.clusterers.DensityBasedClusterer=\
++ weka.clusterers
++
++# Lists the Loaders-Packages I want to choose from
++weka.core.converters.Loader=\
++ weka.core.converters,\
++ org.hypknowsys.wumprep4weka.core.converters
++
++# Lists the Savers-Packages I want to choose from
++weka.core.converters.Saver=\
++ weka.core.converters,\
++ org.hypknowsys.wumprep4weka.core.converters
++
++# Lists the search algorithms for nearest neighbour search
++weka.core.NearestNeighbourSearch =\
++ weka.core
++
++# Lists the distance functions for use nearest neighbour search
++weka.core.DistanceFunction =\
++ weka.core 
++
++# Lists the Search algorithm for Bayes net structure learning-Packages I want to choose from
++weka.classifiers.bayes.net.search.SearchAlgorithm=\
++ weka.classifiers.bayes.net.search.local, \
++ weka.classifiers.bayes.net.search.ci, \
++ weka.classifiers.bayes.net.search.global, \
++ weka.classifiers.bayes.net.search.fixed
++
++weka.classifiers.bayes.net.estimate.BayesNetEstimator =\
++ weka.classifiers.bayes.net.estimate
++
++# Lists the DataGenerator Algorithms-Packages
++weka.datagenerators.DataGenerator=\
++ weka.datagenerators.classifiers.classification,\
++ weka.datagenerators.classifiers.regression,\
++ weka.datagenerators.clusterers
++
++# Lists the packages where to find ClusterDefinition
++weka.datagenerators.ClusterDefinition=\
++ weka.datagenerators,\
++ weka.datagenerators.clusterers
++
+Index: beans/Filter.java
+===================================================================
+RCS file: /usr/local/global-cvs/ml_cvs/weka/gui/beans/Filter.java,v
+retrieving revision 1.13
+diff -u -r1.13 Filter.java
+--- beans/Filter.java	28 Jun 2005 04:25:11 -0000	1.13
++++ beans/Filter.java	18 Oct 2005 12:59:21 -0000
+@@ -152,9 +152,14 @@
+ 				      indexOf('.')+1, 
+ 				      filterName.length());
+     if (loadImages) {
+-      if (!m_visual.loadIcons(BeanVisual.ICON_PATH+filterName+".gif",
++      // Use filer's visual if available
++      if (m_Filter instanceof Visible)
++	    m_visual = ((Visible) m_Filter).getVisual();
++      else {
++        if (!m_visual.loadIcons(BeanVisual.ICON_PATH+filterName+".gif",
+ 		       BeanVisual.ICON_PATH+filterName+"_animated.gif")) {
+-	useDefaultVisual();
++	  useDefaultVisual();
++        }
+       }
+     }
+     m_visual.setText(filterName.substring(filterName.lastIndexOf('.')+1,
+@@ -167,6 +172,9 @@
+ 			 +" is not an incremental filter");
+       }
+     }
++
++    if (m_Filter instanceof LogWriter && m_log != null)
++      ((LogWriter) m_Filter).setLog(m_log);
+     
+     // get global info
+     m_globalInfo = KnowledgeFlowApp.getGlobalInfo(m_Filter);
+@@ -682,6 +690,9 @@
+ 						  Object source) {
+     if (connectionAllowed(eventName)) {
+       m_listenees.put(eventName, source);
++      if (m_Filter instanceof ConnectionNotificationConsumer)
++      	((ConnectionNotificationConsumer) m_Filter)
++      		.connectionNotification(eventName, source);
+     }
+   }
+ 
+@@ -695,6 +706,9 @@
+    */
+   public synchronized void disconnectionNotification(String eventName,
+ 						     Object source) {
++    if (m_Filter instanceof ConnectionNotificationConsumer)
++    	((ConnectionNotificationConsumer) m_Filter)
++    		.disconnectionNotification(eventName, source);
+     m_listenees.remove(eventName);
+   }
+ 
+@@ -744,6 +758,9 @@
+    */
+   public void setLog(Logger logger) {
+     m_log = logger;
++		
++    if (m_Filter != null && m_Filter instanceof LogWriter)
++      ((LogWriter) m_Filter).setLog(m_log);
+   }
+ 
+   /**
+Index: beans/Loader.java
+===================================================================
+RCS file: /usr/local/global-cvs/ml_cvs/weka/gui/beans/Loader.java,v
+retrieving revision 1.12
+diff -u -r1.12 Loader.java
+--- beans/Loader.java	3 Jun 2005 02:45:57 -0000	1.12
++++ beans/Loader.java	18 Oct 2005 12:59:22 -0000
+@@ -250,11 +250,15 @@
+ 				      lastIndexOf('.')+1, 
+ 				      loaderName.length());
+     if (loadImages) {
+-
++    	// Use loader's visual if available
++    	if(m_Loader instanceof Visible)
++    		m_visual = ((Visible) m_Loader).getVisual();
++    	else {
+       if (!m_visual.loadIcons(BeanVisual.ICON_PATH+loaderName+".gif",
+ 			    BeanVisual.ICON_PATH+loaderName+"_animated.gif")) {
+ 	useDefaultVisual();
+       }
++      }
+     }
+     m_visual.setText(loaderName);
+     
+Index: beans/ConnectionNotificationConsumer.java
+===================================================================
+RCS file: beans/ConnectionNotificationConsumer.java
+diff -N beans/ConnectionNotificationConsumer.java
+--- /dev/null	1 Jan 1970 00:00:00 -0000
++++ beans/ConnectionNotificationConsumer.java	1 Jan 1970 00:00:00 -0000
+@@ -0,0 +1,62 @@
++/*
++ *    This program is free software; you can redistribute it and/or modify
++ *    it under the terms of the GNU General Public License as published by
++ *    the Free Software Foundation; either version 2 of the License, or
++ *    (at your option) any later version.
++ *
++ *    This program is distributed in the hope that it will be useful,
++ *    but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *    GNU General Public License for more details.
++ *
++ *    You should have received a copy of the GNU General Public License
++ *    along with this program; if not, write to the Free Software
++ *    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
++ */
++
++/*
++ *    ConnectionNotificationConsumer.java
++ *    Copyright (C) 2005 Carsten Pohle (cp AT cpohle de)
++ */
++
++package weka.gui.beans;
++
++/**
++ * Interface for Beans that can receive (dis-)connection events generated when
++ * (dis-)connecting data processing nodes in the Weka KnowledgeFlow.
++ * 
++ * This is useful, for example, for "intelligent" filters that are able to share
++ * configuration information with preceding nodes in the processing chain.
++ * 
++ * @author Carsten Pohle (cp AT cpohle de)
++ * @version $Revision: 1.2 $
++ */
++public interface ConnectionNotificationConsumer {
++	/**
++	 * Notify this object that it has been registered as a listener with a source
++	 * with respect to the supplied event name.
++	 * 
++	 * This method should be implemented <emph>synchronized</emph>.
++	 * 
++	 * @param eventName
++	 * @param source
++	 *          the source with which this object has been registered as a
++	 *          listener
++	 */
++	public void connectionNotification(String eventName, Object source);
++
++	/**
++	 * Notify this object that it has been deregistered as a listener with a
++	 * source with respect to the supplied event name
++	 * 
++	 * This method should be implemented <emph>synchronized</emph>.
++	 * 
++	 * @param eventName
++	 *          the event
++	 * @param source
++	 *          the source with which this object has been registered as a
++	 *          listener
++	 */
++	public void disconnectionNotification(String eventName, Object source);
++
++}
+Index: beans/LogWriter.java
+===================================================================
+RCS file: beans/LogWriter.java
+diff -N beans/LogWriter.java
+--- /dev/null	1 Jan 1970 00:00:00 -0000
++++ beans/LogWriter.java	1 Jan 1970 00:00:00 -0000
+@@ -0,0 +1,41 @@
++/*
++ *    This program is free software; you can redistribute it and/or modify
++ *    it under the terms of the GNU General Public License as published by
++ *    the Free Software Foundation; either version 2 of the License, or
++ *    (at your option) any later version.
++ *
++ *    This program is distributed in the hope that it will be useful,
++ *    but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *    GNU General Public License for more details.
++ *
++ *    You should have received a copy of the GNU General Public License
++ *    along with this program; if not, write to the Free Software
++ *    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
++ */
++
++/*
++ *    LogWriter.java
++ *    Copyright (C) 2005 Carsten Pohle (cp AT cpohle de)
++ *
++ */
++
++
++package weka.gui.beans;
++
++/**
++ * Interface to be implemented by classes that should be able to write their
++ * own output to the Weka logger. This is useful, for example, for filters
++ * that provide detailed processing instructions.
++ * 
++ * @author Carsten Pohle (cp AT cpohle de)
++ * @version $Revision: 1.2 $
++ */
++public interface LogWriter {
++  /**
++   * Set a logger
++   *
++   * @param logger a <code>weka.gui.Logger</code> value
++   */
++  void setLog(weka.gui.Logger logger);
++}
+Index: Filter.java
+===================================================================
+RCS file: /usr/local/global-cvs/ml_cvs/weka/gui/beans/Filter.java,v
+retrieving revision 1.13
+diff -u -r1.13 Filter.java
+--- Filter.java	28 Jun 2005 04:25:11 -0000	1.13
++++ Filter.java	18 Oct 2005 12:59:35 -0000
+@@ -152,9 +152,14 @@
+ 				      indexOf('.')+1, 
+ 				      filterName.length());
+     if (loadImages) {
+-      if (!m_visual.loadIcons(BeanVisual.ICON_PATH+filterName+".gif",
++      // Use filer's visual if available
++      if (m_Filter instanceof Visible)
++	    m_visual = ((Visible) m_Filter).getVisual();
++      else {
++        if (!m_visual.loadIcons(BeanVisual.ICON_PATH+filterName+".gif",
+ 		       BeanVisual.ICON_PATH+filterName+"_animated.gif")) {
+-	useDefaultVisual();
++	  useDefaultVisual();
++        }
+       }
+     }
+     m_visual.setText(filterName.substring(filterName.lastIndexOf('.')+1,
+@@ -167,6 +172,9 @@
+ 			 +" is not an incremental filter");
+       }
+     }
++
++    if (m_Filter instanceof LogWriter && m_log != null)
++      ((LogWriter) m_Filter).setLog(m_log);
+     
+     // get global info
+     m_globalInfo = KnowledgeFlowApp.getGlobalInfo(m_Filter);
+@@ -682,6 +690,9 @@
+ 						  Object source) {
+     if (connectionAllowed(eventName)) {
+       m_listenees.put(eventName, source);
++      if (m_Filter instanceof ConnectionNotificationConsumer)
++      	((ConnectionNotificationConsumer) m_Filter)
++      		.connectionNotification(eventName, source);
+     }
+   }
+ 
+@@ -695,6 +706,9 @@
+    */
+   public synchronized void disconnectionNotification(String eventName,
+ 						     Object source) {
++    if (m_Filter instanceof ConnectionNotificationConsumer)
++    	((ConnectionNotificationConsumer) m_Filter)
++    		.disconnectionNotification(eventName, source);
+     m_listenees.remove(eventName);
+   }
+ 
+@@ -744,6 +758,9 @@
+    */
+   public void setLog(Logger logger) {
+     m_log = logger;
++		
++    if (m_Filter != null && m_Filter instanceof LogWriter)
++      ((LogWriter) m_Filter).setLog(m_log);
+   }
+ 
+   /**
+Index: Loader.java
+===================================================================
+RCS file: /usr/local/global-cvs/ml_cvs/weka/gui/beans/Loader.java,v
+retrieving revision 1.12
+diff -u -r1.12 Loader.java
+--- Loader.java	3 Jun 2005 02:45:57 -0000	1.12
++++ Loader.java	18 Oct 2005 12:59:35 -0000
+@@ -250,11 +250,15 @@
+ 				      lastIndexOf('.')+1, 
+ 				      loaderName.length());
+     if (loadImages) {
+-
++    	// Use loader's visual if available
++    	if(m_Loader instanceof Visible)
++    		m_visual = ((Visible) m_Loader).getVisual();
++    	else {
+       if (!m_visual.loadIcons(BeanVisual.ICON_PATH+loaderName+".gif",
+ 			    BeanVisual.ICON_PATH+loaderName+"_animated.gif")) {
+ 	useDefaultVisual();
+       }
++      }
+     }
+     m_visual.setText(loaderName);
+     
+Index: ConnectionNotificationConsumer.java
+===================================================================
+RCS file: ConnectionNotificationConsumer.java
+diff -N ConnectionNotificationConsumer.java
+--- /dev/null	1 Jan 1970 00:00:00 -0000
++++ ConnectionNotificationConsumer.java	1 Jan 1970 00:00:00 -0000
+@@ -0,0 +1,62 @@
++/*
++ *    This program is free software; you can redistribute it and/or modify
++ *    it under the terms of the GNU General Public License as published by
++ *    the Free Software Foundation; either version 2 of the License, or
++ *    (at your option) any later version.
++ *
++ *    This program is distributed in the hope that it will be useful,
++ *    but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *    GNU General Public License for more details.
++ *
++ *    You should have received a copy of the GNU General Public License
++ *    along with this program; if not, write to the Free Software
++ *    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
++ */
++
++/*
++ *    ConnectionNotificationConsumer.java
++ *    Copyright (C) 2005 Carsten Pohle (cp AT cpohle de)
++ */
++
++package weka.gui.beans;
++
++/**
++ * Interface for Beans that can receive (dis-)connection events generated when
++ * (dis-)connecting data processing nodes in the Weka KnowledgeFlow.
++ * 
++ * This is useful, for example, for "intelligent" filters that are able to share
++ * configuration information with preceding nodes in the processing chain.
++ * 
++ * @author Carsten Pohle (cp AT cpohle de)
++ * @version $Revision: 1.2 $
++ */
++public interface ConnectionNotificationConsumer {
++	/**
++	 * Notify this object that it has been registered as a listener with a source
++	 * with respect to the supplied event name.
++	 * 
++	 * This method should be implemented <emph>synchronized</emph>.
++	 * 
++	 * @param eventName
++	 * @param source
++	 *          the source with which this object has been registered as a
++	 *          listener
++	 */
++	public void connectionNotification(String eventName, Object source);
++
++	/**
++	 * Notify this object that it has been deregistered as a listener with a
++	 * source with respect to the supplied event name
++	 * 
++	 * This method should be implemented <emph>synchronized</emph>.
++	 * 
++	 * @param eventName
++	 *          the event
++	 * @param source
++	 *          the source with which this object has been registered as a
++	 *          listener
++	 */
++	public void disconnectionNotification(String eventName, Object source);
++
++}
+Index: LogWriter.java
+===================================================================
+RCS file: LogWriter.java
+diff -N LogWriter.java
+--- /dev/null	1 Jan 1970 00:00:00 -0000
++++ LogWriter.java	1 Jan 1970 00:00:00 -0000
+@@ -0,0 +1,41 @@
++/*
++ *    This program is free software; you can redistribute it and/or modify
++ *    it under the terms of the GNU General Public License as published by
++ *    the Free Software Foundation; either version 2 of the License, or
++ *    (at your option) any later version.
++ *
++ *    This program is distributed in the hope that it will be useful,
++ *    but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *    GNU General Public License for more details.
++ *
++ *    You should have received a copy of the GNU General Public License
++ *    along with this program; if not, write to the Free Software
++ *    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
++ */
++
++/*
++ *    LogWriter.java
++ *    Copyright (C) 2005 Carsten Pohle (cp AT cpohle de)
++ *
++ */
++
++
++package weka.gui.beans;
++
++/**
++ * Interface to be implemented by classes that should be able to write their
++ * own output to the Weka logger. This is useful, for example, for filters
++ * that provide detailed processing instructions.
++ * 
++ * @author Carsten Pohle (cp AT cpohle de)
++ * @version $Revision: 1.2 $
++ */
++public interface LogWriter {
++  /**
++   * Set a logger
++   *
++   * @param logger a <code>weka.gui.Logger</code> value
++   */
++  void setLog(weka.gui.Logger logger);
++}

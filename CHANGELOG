@@ -1,0 +1,66 @@
+===============================================================================
+                                CHANGELOG
+      WUMprep4Weka - WUMprep for the Weka data mining environment
+-------------------------------------------------------------------------------
+$Revision: 1.7 $
+$Date: 2005/10/30 19:09:08 $
+===============================================================================
+
+0.9-alpha3 (2005-10-30)
+------------------------
+
+* Configuration editor/customizer shows only settings that are relevant for 
+  WUMprep4Weka by default (cpohle)
+  
+
+0.9-alpha2 (2005-10-27)
+------------------------
+* Made all file input fields in configuration dialogues use the file selector
+  (cpohle)
+
+* Fixed saving of WUMprep configuration files edited via the 
+  WUMprepConfigurationCustomizer (cpohle)
+
+* Show message when a filter node loads a configuration file (cpohle)
+  
+* Show message whenever a configuration has been saved in the 
+  WUMprepConfigurationCustomizer (cpohle)
+
+* Made the confuguration dialogue's context help panel display the field name
+  the current help text refers to (cpohle)
+
+* New filter: org.hypknowsys.wumprep4weka.filters.Conceptualize (cpohle)
+
+* New filter: org.hypknowsys.wumprep4weka.filters.Anonymize (cpohle)
+
+* New filter: org.hypknowsys.wumprep4weka.filters.SessionFilter (cpohle)
+
+* New filter: org.hypknowsys.wumprep4weka.filters.RequestFilter (cpohle)
+
+* New filter: org.hypknowsys.wumprep4weka.filters.Sessionize (cpohle)
+
+* New filter: org.hypknowsys.wumprep4weka.filters.DetectRobots (cpohle)
+
+* Made java.io.* and Thread variables transient in WUMprepWrapper and 
+  WUMprepFilter (cpohle)
+
+
+0.9-alpha1 (2005-10-18)
+------------------------
+
+* First release with Weka integration (0.1.0-beta only provided a wumprep.conf
+  editor GUI) (cpohle)
+  
+* Installation documentation (cpohle)
+
+* WeblogLoader, WeblogSaver, WUMprepFilterTest and DnsLookup nodes for the
+  Weka KnowledgeFlow (cpohle)
+
+* Switched to new version numbering scheme (major.minor[-(alpha|beta)[n]])
+  (cpohle)
+
+
+0.1.0-beta
+-----------
+
+* Initial release (cpohle)

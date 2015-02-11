@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="javadoc">
+<target name="javadoc">
+<javadoc access="protected" author="true" classpath="../weka/build/classes" destdir="doc" doctitle="WUMprep4Weka" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="org.hypknowsys.wumprep4weka.core.converters,org.hypknowsys.wumprep,org.hypknowsys.wumprep4weka.gui,org.hypknowsys.wumprep.configeditor.help,org.hypknowsys.wumprep.config,org.hypknowsys.wumprep4weka.filters,org.hypknowsys.util,org.hypknowsys.wumprep.configeditor" source="1.5" sourcepath="src" splitindex="true" use="true" version="true"/>
+</target>
+</project>

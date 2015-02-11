@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jardesc>
+<jar path="C:/Dokumente und Einstellungen/cpohle.HOLSTEIN/Eigene Dateien/development/workspace/WUMprep4Weka/dist/weka-wp4w-0.9-alpha3.jar"/>
+<options buildIfNeeded="true" compress="true" descriptionLocation="/WUMprep4Weka/build/Weka-WP4W.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="true" overwrite="true" saveDescription="true" useSourceFolders="false"/>
+<manifest generateManifest="false" mainClassHandleIdentifier="=weka/src&lt;weka.gui{GUIChooser.java[GUIChooser" manifestLocation="/WUMprep4Weka/build/Weka-WP4W.manifest" manifestVersion="1.0" reuseManifest="true" saveManifest="true" usesManifest="true">
+<sealing sealJar="false">
+<packagesToSeal/>
+<packagesToUnSeal/>
+</sealing>
+</manifest>
+<selectedElements exportClassFiles="false" exportJavaFiles="false" exportOutputFolder="true">
+<folder path="/WUMprep4Weka/lib"/>
+<javaElement handleIdentifier="=WUMprep4Weka/src"/>
+<javaElement handleIdentifier="=weka/src"/>
+</selectedElements>
+</jardesc>

@@ -1,0 +1,9 @@
+org.hypknowsys.util
+org.hypknowsys.wumprep
+org.hypknowsys.wumprep.config
+org.hypknowsys.wumprep.configeditor
+org.hypknowsys.wumprep.configeditor.help
+org.hypknowsys.wumprep4weka.core
+org.hypknowsys.wumprep4weka.core.converters
+org.hypknowsys.wumprep4weka.filters
+org.hypknowsys.wumprep4weka.gui

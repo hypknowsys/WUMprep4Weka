@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="450.00000pt"
+   height="300.00000pt"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.42"
+   sodipodi:docbase="C:\Dokumente und Einstellungen\cpohle.HOLSTEIN\Eigene Dateien\development\workspace\WUMprep4Weka\src\org\hypknowsys\wumprep\configeditor\res"
+   sodipodi:docname="WUMprepStartupScreen.svg">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient4301">
+      <stop
+         style="stop-color:#cc0033;stop-opacity:1;"
+         offset="0"
+         id="stop4303" />
+      <stop
+         id="stop4309"
+         offset="0.50000000"
+         style="stop-color:#ffffff;stop-opacity:1.0000000;" />
+      <stop
+         style="stop-color:#cc0033;stop-opacity:0;"
+         offset="1"
+         id="stop4305" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2067">
+      <stop
+         style="stop-color:#d70000;stop-opacity:1.0000000;"
+         offset="0.00000000"
+         id="stop2069" />
+      <stop
+         id="stop2077"
+         offset="0.50000000"
+         style="stop-color:#030000;stop-opacity:0.49803922;" />
+      <stop
+         style="stop-color:#910000;stop-opacity:0.24705882;"
+         offset="0.75000000"
+         id="stop2079" />
+      <stop
+         id="stop2081"
+         offset="0.91588783"
+         style="stop-color:#480000;stop-opacity:0.12156863;" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop2071" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2067"
+       id="radialGradient2075"
+       cx="78.979927"
+       cy="13.749461"
+       fx="78.979927"
+       fy="13.749461"
+       r="77.119690"
+       gradientTransform="matrix(1.045330,0.000000,0.000000,0.162167,-8.432357e-2,12.06207)"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="reflect" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="1.0000000"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="350"
+     inkscape:cy="520"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     sodipodi:insensitive="true"
+     style="display:none">
+    <image
+       id="image2105"
+       height="300.00000"
+       width="450.00000"
+       sodipodi:absref="C:\Dokumente und Einstellungen\cpohle.HOLSTEIN\Eigene Dateien\development\workspace\hypKNOWsys\src\java\org\hypknowsys\wum\resources\img\WumIntro.gif"
+       xlink:href="C:\Dokumente und Einstellungen\cpohle.HOLSTEIN\Eigene Dateien\development\workspace\hypKNOWsys\src\java\org\hypknowsys\wum\resources\img\WumIntro.gif"
+       x="-0.54249060"
+       y="-0.13562369" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Frame"
+     style="display:inline">
+    <rect
+       style="fill:none;fill-opacity:1.0000000;fill-rule:evenodd;stroke:#000000;stroke-opacity:1.0000000"
+       id="rect2109"
+       width="450.00000"
+       height="300.00000"
+       x="-1.3562387"
+       y="-0.27124023"
+       inkscape:export-filename="C:\Dokumente und Einstellungen\cpohle.HOLSTEIN\Eigene Dateien\development\workspace\WUMprep4Weka\src\org\hypknowsys\wumprep\configeditor\res\WUMprepStartupScreen.png"
+       inkscape:export-xdpi="89.800446"
+       inkscape:export-ydpi="89.800446" />
+    <rect
+       style="fill:#cc0033;fill-opacity:1.0000000;fill-rule:evenodd;stroke:none;stroke-opacity:1.0000000"
+       id="rect2837"
+       width="201.40144"
+       height="7.4593129"
+       x="209.53888"
+       y="-0.77124023" />
+    <rect
+       style="fill:#cc0033;fill-opacity:1.0000000;fill-rule:evenodd;stroke:none;stroke-opacity:1.0000000"
+       id="rect3565"
+       width="6.7811904"
+       height="170.20796"
+       x="-1.8562387"
+       y="130.02080" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Schatten">
+    <a
+       id="a5055"
+       transform="translate(1.356239,-18.30922)">
+      <text
+         sodipodi:linespacing="125.00000%"
+         id="text3567"
+         y="138.97183"
+         x="64.563133"
+         style="font-size:56.000000px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125.00000%;writing-mode:lr-tb;text-anchor:start;opacity:0.54545456;fill:#000000;fill-opacity:1.0000000;fill-rule:evenodd;stroke:none;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;display:inline;font-family:Melior LT"
+         xml:space="preserve"><tspan
+           style="fill:#000000;fill-opacity:1.0000000;fill-rule:evenodd"
+           y="138.97183"
+           x="64.563133"
+           id="tspan3569"
+           sodipodi:role="line">WUMprep</tspan></text>
+    </a>
+    <text
+       xml:space="preserve"
+       style="font-size:36.000000px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125.00000%;writing-mode:lr-tb;text-anchor:start;opacity:0.54545456;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;display:inline;font-family:Melior LT"
+       x="68.499374"
+       y="169.48721"
+       id="text3571"
+       sodipodi:linespacing="125.00000%"><tspan
+         sodipodi:role="line"
+         id="tspan3573"
+         x="68.499374"
+         y="169.48721">Configuration Editor</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Text"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <text
+       sodipodi:linespacing="125.00000%"
+       id="text4311"
+       y="118.96732"
+       x="64.393616"
+       style="font-size:56.000000px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125.00000%;writing-mode:lr-tb;text-anchor:start;fill:#cc0033;fill-opacity:1.0000000;fill-rule:evenodd;stroke:none;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;display:inline;font-family:Melior LT"
+       xml:space="preserve"><tspan
+         style="fill:#cc0033;fill-opacity:1.0000000;fill-rule:evenodd"
+         y="118.96732"
+         x="64.393616"
+         id="tspan4313"
+         sodipodi:role="line">WUMprep</tspan></text>
+    <text
+       sodipodi:linespacing="125.00000%"
+       id="text4315"
+       y="167.79192"
+       x="66.973618"
+       style="font-size:36.000000px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125.00000%;writing-mode:lr-tb;text-anchor:start;fill:#cc0033;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;display:inline;font-family:Melior LT"
+       xml:space="preserve"><tspan
+         y="167.79192"
+         x="66.973618"
+         id="tspan4317"
+         sodipodi:role="line">Configuration Editor</tspan></text>
+    <image
+       style="display:inline"
+       id="image5106"
+       height="23.000000"
+       width="121.00000"
+       sodipodi:absref="C:\Dokumente und Einstellungen\cpohle.HOLSTEIN\Eigene Dateien\development\workspace\WUMprep4Weka\src\org\hypknowsys\wumprep\configeditor\res\hyoKNOWsys.png"
+       xlink:href="hyoKNOWsys.png"
+       x="5.5000000"
+       y="5.5000000" />
+  </g>
+</svg>

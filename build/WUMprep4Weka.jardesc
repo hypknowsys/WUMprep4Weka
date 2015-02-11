@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jardesc>
+<jar path="C:/Dokumente und Einstellungen/cpohle.HOLSTEIN/Eigene Dateien/development/workspace/WUMprep4Weka/dist/WUMprep4Weka-0.9-alpha3.jar"/>
+<options buildIfNeeded="true" compress="true" descriptionLocation="/WUMprep4Weka/build/WUMprep4Weka.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="true" overwrite="true" saveDescription="true" useSourceFolders="false"/>
+<manifest generateManifest="false" manifestLocation="/WUMprep4Weka/build/WUMprep4Weka.manifest" manifestVersion="1.0" reuseManifest="true" saveManifest="true" usesManifest="true">
+<sealing sealJar="false">
+<packagesToSeal/>
+<packagesToUnSeal/>
+</sealing>
+</manifest>
+<selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+<file path="/WUMprep4Weka/COPYING"/>
+<file path="/WUMprep4Weka/CHANGELOG"/>
+<file path="/WUMprep4Weka/INSTALL"/>
+<javaElement handleIdentifier="=WUMprep4Weka/src"/>
+<folder path="/WUMprep4Weka/lib"/>
+<file path="/WUMprep4Weka/README"/>
+</selectedElements>
+</jardesc>
